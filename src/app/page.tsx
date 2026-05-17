@@ -43,6 +43,15 @@ export const projects = [
     url: "https://t.me/GushelperBot",
     image: "/gushelper_bot.png",
     color: "from-cyan-500 to-blue-800"
+  },
+  {
+    id: 5,
+    title: "Kraken Deck",
+    subtitle: "YouTube Synthesis Agent",
+    description: "Batch fetch, process, and synthesize video intelligence with full metadata extraction.",
+    url: "https://kraken-deck.vercel.app",
+    image: "/kraken_orbit_hub.png",
+    color: "from-emerald-600 to-teal-900"
   }
 ];
 
@@ -123,8 +132,10 @@ export default function LinkTreeCarousel() {
                             src={project.image} 
                             alt={project.title} 
                             fill 
+                            sizes="(max-width: 768px) 100vw, 500px"
+                            quality={70}
+                            priority={true}
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            priority={index === 0}
                           />
                         </div>
                         
@@ -208,6 +219,9 @@ export default function LinkTreeCarousel() {
                         src={project.image} 
                         alt={project.title} 
                         fill 
+                        sizes="(max-width: 768px) 50vw, 250px"
+                        quality={70}
+                        priority={true}
                         className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                       />
                     </div>
